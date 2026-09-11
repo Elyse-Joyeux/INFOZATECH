@@ -3,57 +3,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Elysé Joyeux — Software Engineer and Cybersecurity Enthusiast.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <title>Elysé Joyeux Portfolio</title>
+    <title>Elysé Joyeux | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 </head>
 <body>
-    <div class="nav-container">
-        <div class="logo">
-            <span>Elysé Joyeux</span>
-        </div>
-        <div class="links">
-            <div class="link"><a href="#">Home</a></div>
-            <div class="link"><a href="#">About</a></div>
-            <div class="link"><a href="#">Skills</a></div>
-            <div class="link"><a href="#">Services</a></div>
-            <div class="link"><a href="#">Blogs</a></div>
-            <div class="link contact-btn"><a href="#">Contact</a></div>
-        </div>
-        <i class="fa-solid fa-bars hamburg"></i>
-    </div>
-    <div class="dropdown">
-        <div class="links">
-            <a href="">Home</a>
-            <a href="">About</a>
-            <a href="">Skills</a>
-            <a href="">Services</a>
-            <a href="">Blogs</a>
-            <a href="">Contact</a> 
-            <i class="fa-solid fa-xmark cancle"></i> 
-        </div>
-    </div>
-    
-    <section>
-        <div class="main-container">
-            <div class="image">
-                <img src="Elyse.png" alt="">
-            </div>
-            <div class="content">
-                <h1>Hey I'm<span>Elysé Joyeux</span></h1>
-                <div class="typewriter">I'm a<span></span></div>
-                <div class="social-links">
-                    <a href="#"><i class="fa-brands fa-github"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="home">
+        <nav aria-label="Primary">
+            <div class="nav-container">
+                <a class="logo" href="#home" data-aos="zoom-in" data-aos-duration="800">
+                    Elysé <span class="logo-accent">Joyeux</span>
+                </a>
+                <div class="links">
+                    <div class="link" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100"><a href="#home">Home</a></div>
+                    <div class="link" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150"><a href="#about">About</a></div>
+                    <div class="link" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200"><a href="#skills">Skills</a></div>
+                    <div class="link" data-aos="fade-up" data-aos-duration="800" data-aos-delay="250"><a href="#projects">Projects</a></div>
+                    <div class="link contact-btn" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300"><a href="#contact">Contact</a></div>
                 </div>
-                <div class="btn">
-                    <button>Download CV</button>
+                <button type="button" class="hamburg" aria-label="Open menu" aria-expanded="false" onclick="hamburg()">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="dropdown" id="mobile-menu" aria-hidden="true">
+                <div class="links">
+                    <a href="#home" onclick="cancel()">Home</a>
+                    <a href="#about" onclick="cancel()">About</a>
+                    <a href="#skills" onclick="cancel()">Skills</a>
+                    <a href="#projects" onclick="cancel()">Projects</a>
+                    <a href="#contact" onclick="cancel()">Contact</a>
+                    <button type="button" class="cancel" aria-label="Close menu" onclick="cancel()">
+                        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                    </button>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="main-container">
+                <div class="image" data-aos="zoom-in-right" data-aos-duration="600">
+                    <div class="profile-ring">
+                        <img src="Elyse.png" alt="Portrait of Elysé Joyeux">
+                    </div>
+                </div>
+                <div class="content">
+                    <p class="eyebrow" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">Welcome to my portfolio</p>
+                    <h1 id="hero-heading" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
+                        Hey, I'm <span>Elysé Joyeux</span>
+                    </h1>
+                    <div class="typewriter" data-aos="fade-right" data-aos-duration="800" data-aos-delay="400">
+                        I'm a <span></span>
+                    </div>
+                    <p class="hero-text" data-aos="flip-up" data-aos-duration="800" data-aos-delay="500">
+                        Second-year IT student passionate about building reliable software and exploring cybersecurity.
+                        I enjoy turning ideas into clean, accessible web experiences and learning through hands-on projects.
+                    </p>
+                    <div class="hero-actions" data-aos="zoom-out-left" data-aos-duration="800" data-aos-delay="600">
+                        <a class="btn btn-primary" href="cv/Elysé_Joyeux_Resume.pdf" download>
+                            <i class="fa-solid fa-download" aria-hidden="true"></i> Download Resume
+                        </a>
+                        <a class="btn btn-outline" href="#projects">View Projects</a>
+                    </div>
+                    <div class="social-links" data-aos="flip-down" data-aos-duration="800" data-aos-delay="700">
+                        <a href="https://github.com/Elyse-Joyeux" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/elys%C3%A9-joyeux-16700a38b" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section about" id="about" aria-labelledby="about-heading">
+            <div class="section-inner">
+                <header class="section-header" data-aos="fade-up">
+                    <span class="section-label">About Me</span>
+                    <h2 id="about-heading">Building with purpose &amp; curiosity</h2>
+                    <p class="section-lead">
+                        I combine software development fundamentals with a security-minded approach to every project I take on.
+                    </p>
+                </header>
+                <div class="about-grid">
+                    <article class="about-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fa-solid fa-code" aria-hidden="true"></i>
+                        <h3>Development</h3>
+                        <p>I build with technologies such as Next.js for full-stack web development, React for interactive frontends, Express.js for APIs, JavaScript and Python for application logic — always aiming for clean, responsive experiences.</p>
+                    </article>
+                    <article class="about-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                        <h3>Cybersecurity</h3>
+                        <p>Interested in secure design, threat awareness, and applying best practices in real applications.</p>
+                    </article>
+                    <article class="about-card" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fa-solid fa-users" aria-hidden="true"></i>
+                        <h3>Collaboration</h3>
+                        <p>Comfortable in team settings, version control with Git, and communicating progress clearly.</p>
+                    </article>
+                </div>
+                <ul class="stats" data-aos="fade-up" data-aos-delay="150">
+                    <li><strong>2+</strong><span>Years studying IT</span></li>
+                    <li><strong>5+</strong><span>Technologies explored</span></li>
+                    <li><strong>5+</strong><span>Projects in progress</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section skills" id="skills" aria-labelledby="skills-heading">
+            <div class="section-inner">
+                <header class="section-header" data-aos="fade-up">
+                    <span class="section-label">Skills</span>
+                    <h2 id="skills-heading">Main skills &amp; strengths</h2>
+                </header>
+                <div class="skills-layout">
+                    <div class="skill-group" data-aos="fade-right">
+                        <h3 class="skill-group-title">Main skills</h3>
+                        <div class="skill-tags">
+                            <span>Python</span>
+                            <span>JavaScript</span>
+                            <span>ExpressJS</span>
+                            <span>ReactJS</span>
+                            <span>NextJS</span>
+                        </div>
+                    </div>
+                    <div class="skill-group" data-aos="fade-left">
+                        <h3 class="skill-group-title">Strengths</h3>
+                        <div class="skill-tags">
+                            <span>Networking</span>
+                            <span>Linux</span>
+                            <span>UI/UX Design</span>
+                            <span>Penetration Testing</span>
+                            <span>Databases</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section projects" id="projects" aria-labelledby="projects-heading">
+            <div class="section-inner">
+                <header class="section-header" data-aos="fade-up">
+                    <span class="section-label">Projects</span>
+                    <h2 id="projects-heading">Selected work</h2>
+                    <p class="section-lead">Applications and platforms I have worked on across education, hospitality, and health tech.</p>
+                </header>
+                <div class="project-grid">
+                    <article class="project-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="project-icon"><i class="fa-solid fa-brain" aria-hidden="true"></i></div>
+                        <h3>UMUCYO AI</h3>
+                        <p>Umucyo AI is an educational AI platform designed to reduce students’ overreliance on AI by promoting critical thinking, problem-solving, and independent learning.</p>
+                    </article>
+                    <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-icon"><i class="fa-solid fa-utensils" aria-hidden="true"></i></div>
+                        <h3>Foodey</h3>
+                        <p>Foodey is a web application for restaurant management, streamlining orders, menus, and day-to-day operations for staff and owners in one place.</p>
+                    </article>
+                    <article class="project-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-icon"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i></div>
+                        <h3>HealthBridgeTech</h3>
+                        <p>HealthBridgeTech is a web-based application that helps people improve their health through real-time data, activity tracking, heart rate monitoring, and insights that support better daily habits.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact" id="contact" aria-labelledby="contact-heading">
+            <div class="section-inner contact-inner">
+                <header class="section-header" data-aos="fade-up">
+                    <span class="section-label">Contact</span>
+                    <h2 id="contact-heading">Let's connect</h2>
+                    <p class="section-lead">Open to internships, collaborations, and feedback on my work.</p>
+                </header>
+                <div class="contact-grid" data-aos="fade-up" data-aos-delay="100">
+                    <a class="contact-card" href="mailto:elyse.joyeux@student.edu">
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">elysejoyeux@gmail.com</span>
+                    </a>
+                    <a class="contact-card" href="https://github.com/Elyse-Joyeux" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        <span class="contact-label">GitHub</span>
+                        <span class="contact-value">Elyse-Joyeux</span>
+                    </a>
+                    <a class="contact-card" href="https://www.linkedin.com/in/elys%C3%A9-joyeux-16700a38b" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value">Elysé Joyeux</span>
+                    </a>
+                    <a class="contact-card highlight" href="cv/Elysé_Joyeux_Resume.pdf" download>
+                        <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
+                        <span class="contact-label">Resume</span>
+                        <span class="contact-value">Download PDF</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Elysé Joyeux. Crafted with HTML &amp; CSS.</p>
+        <a class="back-to-top" href="#home" aria-label="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ offset: 40, once: true, duration: 700 });
+
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        function hamburg() {
+            const menu = document.getElementById("mobile-menu");
+            const btn = document.querySelector(".hamburg");
+            menu.style.transform = "translateY(0)";
+            menu.setAttribute("aria-hidden", "false");
+            btn.setAttribute("aria-expanded", "true");
+        }
+
+        function cancel() {
+            const menu = document.getElementById("mobile-menu");
+            const btn = document.querySelector(".hamburg");
+            menu.style.transform = "translateY(-120%)";
+            menu.setAttribute("aria-hidden", "true");
+            btn.setAttribute("aria-expanded", "false");
+        }
+
+        const sections = document.querySelectorAll("section[id], header[id]");
+        const navLinks = document.querySelectorAll(".nav-container .links a");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+                    navLinks.forEach((link) => {
+                        link.classList.toggle("active", link.getAttribute("href") === "#" + entry.target.id);
+                    });
+                });
+            },
+            { rootMargin: "-40% 0px -55% 0px" }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+    </script>
 </body>
 </html>
