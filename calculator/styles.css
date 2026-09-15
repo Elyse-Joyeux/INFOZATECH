@@ -1,0 +1,132 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e2f;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.calculator{
+    width: 350px;
+    background-color: #2b2b40;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+}
+
+/* display*/
+.display{
+    height: 100px;
+    background-color: #171722;
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#previous-display{
+    color: #999;
+    font-size: 18px;
+    min-height: 25px;
+}
+
+#current-display{
+    font-size: 36px;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+/*buttons*/
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button{
+    height: 65px;
+    border: none;
+    border-radius: 10px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.15s;
+}
+button:hover{
+    transform: scale(1.03);
+}
+button:active{
+    transform: scale(0.95);
+}
+
+/*number buttons */
+.number{
+    background-color: #3a3a52;
+    color: white;
+}
+.number:hover{
+    background-color: #4a4a65;
+}
+
+/* operators */
+
+.operator {
+    background-color: #ff9500;
+
+    color: white;
+}
+
+.operator:hover {
+    background-color: #ffad33;
+}
+
+/* equal */
+
+.equals {
+    background-color: #2ecc71;
+
+    color: white;
+}
+
+.equals:hover {
+    background-color: #45d982;
+}
+
+/* clear button */
+
+.clear {
+    background-color: #e74c3c;
+
+    color: white;
+}
+
+.clear:hover {
+    background-color: #ed6253;
+}
+
+/* delete button */
+
+.delete {
+    background-color: #55556b;
+
+    color: white;
+}
+
+/* button occupy columns*/
+
+.span-two {
+    grid-column: span 2;
+}
